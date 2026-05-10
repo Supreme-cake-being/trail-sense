@@ -1,3 +1,9 @@
 {
-  "extends": "@trailsense/tsconfig/react-native.json"
+  "extends": "@trailsense/tsconfig/react-native.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
 }
