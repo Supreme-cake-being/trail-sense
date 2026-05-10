@@ -6,7 +6,7 @@ config({ path: resolve(__dirname, '.env') });
 
 export default defineConfig({
   schema: './src/database/schema/index.ts',
-  out: './drizzle',
+  out: './src/database/migrations',
   dialect: 'postgresql',
   dbCredentials: {
     host: process.env.DATABASE_HOST ?? 'localhost',
