@@ -1,8 +1,3 @@
 {
-  "extends": "@trailsense/tsconfig/base.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "strict": true,
-    "baseUrl": "."
-  }
+  "extends": "@trailsense/tsconfig/react-native.json"
 }

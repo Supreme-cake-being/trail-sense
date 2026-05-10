@@ -1,18 +1,9 @@
 {
-  "extends": "@trailsense/tsconfig/base.json",
+  "extends": "@trailsense/tsconfig/nestjs.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "ES2022",
-    "sourceMap": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "incremental": true
+    "removeComments": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
