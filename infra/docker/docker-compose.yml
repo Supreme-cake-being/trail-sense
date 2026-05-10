@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: trailsense-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: trailsense
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - trailsense_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  trailsense_postgres_data:
