@@ -4,10 +4,10 @@ import { Pool } from 'pg';
 
 import type { Env } from '../config/env.schema';
 
-export const DATABASE = Symbol('DATABASE');
+export const DATABASE_CONNECTION = Symbol('DATABASE_CONNECTION');
 
 export const databaseProvider = {
-  provide: DATABASE,
+  provide: DATABASE_CONNECTION,
   inject: [ConfigService],
   useFactory: (configService: ConfigService<Env, true>) => {
     const pool = new Pool({

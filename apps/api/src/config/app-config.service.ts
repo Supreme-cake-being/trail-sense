@@ -22,4 +22,12 @@ export class AppConfigService {
   get isProduction(): boolean {
     return this.nodeEnv === 'production';
   }
+
+  get jwtSecret(): string {
+    return this.configService.get('JWT_ACCESS_SECRET', { infer: true });
+  }
+
+  get jwtExpiresIn(): string {
+    return this.configService.get('JWT_ACCESS_EXPIRES_IN', { infer: true });
+  }
 }

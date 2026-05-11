@@ -6,12 +6,10 @@ export interface AuthTokens {
 export interface AuthUser {
   id: string;
   email: string;
-  firstName: string | null;
-  lastName: string | null;
-  isEmailVerified: boolean;
+  username: string;
 }
 
 export interface AuthResponse {
   user: AuthUser;
-  tokens: AuthTokens;
+  accessToken: string;
 }
