@@ -15,6 +15,12 @@ export const envSchema = z.object({
   DATABASE_USER: z.string().min(1),
   DATABASE_PASSWORD: z.string().min(1),
   DATABASE_SSL: z.coerce.boolean().default(false),
+
+  JWT_ACCESS_SECRET: z.string().min(32),
+  JWT_ACCESS_EXPIRES_IN: z.string().min(1),
+
+  JWT_REFRESH_SECRET: z.string().min(32),
+  JWT_REFRESH_EXPIRES_IN: z.string().min(1),
 });
 
 export type Env = z.infer<typeof envSchema>;
